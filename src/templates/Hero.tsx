@@ -13,7 +13,14 @@ const Hero = () => (
       <NavbarTwoColumns logo={<Logo xl />}>
         <li>
           <Link href="https://github.com/ixartz/Next-JS-Landing-Page-Starter-Template">
-            <a>GitHub</a>
+            <a>
+              {new Date().toLocaleDateString('en-us', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+              })}
+            </a>
           </Link>
         </li>
         <li>
@@ -28,15 +35,15 @@ const Hero = () => (
       <HeroOneButton
         title={
           <>
-            {'The modern landing page for\n'}
-            <span className="text-primary-500">React developers</span>
+            {'Welcome to Century Stack\n'}
+            <span className="text-primary-500">Resources Provider Company</span>
           </>
         }
-        description="The easiest way to build a React landing page in seconds."
+        description="Here you can find the best resources for your requierments."
         button={
-          <Link href="https://creativedesignsguru.com/category/nextjs/">
+          <Link href="mailto:infocenturystack@gmail.com">
             <a>
-              <Button xl>Download Your Free Theme</Button>
+              <Button xl>Send your question now!</Button>
             </a>
           </Link>
         }
